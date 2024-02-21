@@ -44,7 +44,7 @@
 		<tbody>
 			<?php 
 			$no = 1;
-			$data = mysqli_query($koneksi,"select * from mahasiswa");
+			$data = mysqli_query($koneksi,"select * from mahasiswas");
 			while($d=mysqli_fetch_array($data)){
 				?>
 				<tr>
@@ -70,19 +70,19 @@
 					label: '',
 					data: [
 					<?php 
-					$jumlah_teknik = mysqli_query($koneksi,"select * from mahasiswa where fakultas='teknik'");
+					$jumlah_teknik = mysqli_query($koneksi,"select * from mahasiswas where fakultas='teknik'");
 					echo mysqli_num_rows($jumlah_teknik);
 					?>, 
 					<?php 
-					$jumlah_ekonomi = mysqli_query($koneksi,"select * from mahasiswa where fakultas='ekonomi'");
+					$jumlah_ekonomi = mysqli_query($koneksi,"select * from mahasiswas where fakultas='ekonomi'");
 					echo mysqli_num_rows($jumlah_ekonomi);
 					?>, 
 					<?php 
-					$jumlah_fisip = mysqli_query($koneksi,"select * from mahasiswa where fakultas='fisip'");
+					$jumlah_fisip = mysqli_query($koneksi,"select * from mahasiswas where fakultas='fisip'");
 					echo mysqli_num_rows($jumlah_fisip);
 					?>, 
 					<?php 
-					$jumlah_pertanian = mysqli_query($koneksi,"select * from mahasiswa where fakultas='pertanian'");
+					$jumlah_pertanian = mysqli_query($koneksi,"select * from mahasiswas where fakultas='pertanian'");
 					echo mysqli_num_rows($jumlah_pertanian);
 					?>
 					],
